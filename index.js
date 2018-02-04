@@ -42,6 +42,8 @@ app.get('/', (req, res) => {
     });
 });
 
-app.listen(7500, () => {
+const port = process.env.PORT || 7500;
+
+app.listen(port, () => {
   console.log('App listenting on port 7500!');
 });
