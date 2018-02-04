@@ -45,5 +45,5 @@ app.get('/', (req, res) => {
 const port = process.env.PORT || 7500;
 
 app.listen(port, () => {
-  console.log('App listenting on port 7500!');
+  console.log(`App listenting on port ${port}!`);
 });
