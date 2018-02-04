@@ -1,0 +1,31 @@
+{
+  "name": "iptv-parser",
+  "version": "1.0.0",
+  "description": "Parse an IPTV m3u playlist to only include wanted channels.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/spencercharest/iptv-parser.git"
+  },
+  "keywords": [
+    "git@github.com:spencercharest/iptv-parser.git"
+  ],
+  "author": "Spencer Charest",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/spencercharest/iptv-parser/issues"
+  },
+  "homepage": "https://github.com/spencercharest/iptv-parser#readme",
+  "dependencies": {
+    "dotenv": "^5.0.0",
+    "express": "^4.16.2",
+    "request": "^2.83.0",
+    "request-promise": "^4.2.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.14.12"
+  }
+}
