@@ -12,7 +12,7 @@ app.get('/', (req, res) => {
 
   rp({
     method: 'GET',
-    url: `http://api.mystreams.club/vget?password=${password}&username=${username}`
+    url: `http://vapi.vaders.tv/epg/vget?username=vsmystreams_${username}&password=${password}`
   })
     .then((channels) => {
 
