@@ -1,10 +1,16 @@
 const express = require('express');
 const axios = require('axios');
 const fs = require('fs');
-const dotenv = require('dotenv').config();
+const path = require('path');
+const dotenv = require('dotenv');
+
 const wanted = require('./channels');
 
 const app = express();
+
+dotenv.config({
+  path: path.join(__dirname, './.env')
+});
 
 const username = process.env.USERNAME;
 const password = process.env.PASSWORD;
