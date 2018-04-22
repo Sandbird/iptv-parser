@@ -1,5 +1,6 @@
 const express = require('express');
-const rp = require('request-promise');
+const axios = require('axios');
+const fs = require('fs');
 const dotenv = require('dotenv').config();
 const wanted = require('./channels');
 
@@ -10,11 +11,16 @@ const password = process.env.PASSWORD;
 
 app.get('/', (req, res) => {
 
-  rp({
+  axios({
     method: 'GET',
-    url: `http://vapi.vaders.tv/epg/vget?username=vsmystreams_${username}&password=${password}`
+    url: `http://vapi.vaders.tv/epg/vget?username=vsmystreams_${username}&password=${password}`,
+    responseType: 'arrayBuffer'
   })
-    .then((channels) => {
+    .then((response) => {
+
+      const { data } = response;
+
+      let channels = data.toString('utf8')
 
       channels = channels.split('#EXTINF:-1 ');
 
